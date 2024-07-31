@@ -1,0 +1,14 @@
+{% extends 'navbar.html' %}
+{% block content %}
+
+<div class="container text-center">
+    <h2>Edit Task</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="id" value="{{ task_id }}">
+        <button type="submit" class="btn btn-primary">Save changes and Mark as Done</button>
+    </form>
+</div>
+
+{% endblock %}

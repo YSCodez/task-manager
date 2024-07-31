@@ -1,0 +1,15 @@
+{% extends 'navbar.html' %}
+{% block content %}
+
+    <div class="container my-4 text-center mb-5">
+        <h2>Add New Task</h2>
+        <form method="post">
+            <!-- {% csrf_token %} -->
+            {{ form }}
+            <br>
+        {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+    </div>
+
+{% endblock %}
