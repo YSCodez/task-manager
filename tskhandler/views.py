@@ -14,11 +14,11 @@ def add_task(request):
     else:
         form = TaskAllocForm()
 
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'tskhandler/index.html', {'form': form})
 
 def viewtask(request):
     taskList = TaskAllocA.objects.filter(status=TaskAllocA.Status.PENDING)
-    return render(request, 'viewtask.html', {'taskList': taskList})
+    return render(request, 'tskhandler/viewtask.html', {'taskList': taskList})
 
 def mark_as_done(request, task_id):
     task = get_object_or_404(TaskAllocA, id=task_id)
@@ -39,11 +39,11 @@ def mark_edit_task(request, task_id):
     else:
         form = TaskAllocForm(instance=task)  # Pre-fill the form with existing task data
 
-    return render(request, 'edittask.html', {'form': form})
+    return render(request, 'tskhandler/edittask.html', {'form': form})
 
 def edittask(request):
     taskList = TaskAllocA.objects.all()
-    return render(request, 'edittask.html', {'taskList': taskList})
+    return render(request, 'tskhandler/edittask.html', {'taskList': taskList})
 
 def taskdelete(request, task_id):
     task = get_object_or_404(TaskAllocA, id=task_id)
@@ -53,4 +53,4 @@ def taskdelete(request, task_id):
 
 def completedtask(request):
     taskList = TaskAllocA.objects.filter(status=TaskAllocA.Status.COMPLETED)
-    return render(request, 'completedtask.html', {'taskList': taskList})
+    return render(request, 'tskhandler/completedtask.html', {'taskList': taskList})
