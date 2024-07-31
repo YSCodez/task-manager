@@ -1,7 +1,7 @@
-## Task Allocation Management System
+# Task Allocation Management System
 A Django-based web application for managing tasks. The system allows users to add, view, edit, and delete tasks. Tasks can be marked as completed or left pending.
 
-## Features
+# Features
 - Add new tasks with descriptions.
 - View a list of tasks with timestamps.
 - Edit existing tasks.
@@ -13,13 +13,13 @@ A Django-based web application for managing tasks. The system allows users to ad
 - Database: SQLite (default for Django, can be changed to other databases)
 - Python: 3.x
 
-## Setup
-# Prerequisites
+# Setup
+## Prerequisites
 - Python 3.x
 - Django
 - Bootstrap (included via CDN in templates)
 
-## Installation
+# Installation
 1. Clone the Repository
 ```bash
 git clone task-manager
